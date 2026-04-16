@@ -1,0 +1,1 @@
+# Dockerfile for Node.js RAG Chatbot\nFROM node:16\n\n# Create app directory\nWORKDIR /usr/src/app\n\n# Install app dependencies\nCOPY package*.json ./\nRUN npm install\n\n# Bundle app source\nCOPY . .\n\n# Expose port 3000\nEXPOSE 3000\n\n# CMD to run the app\nCMD [ "npm", "start" ]
